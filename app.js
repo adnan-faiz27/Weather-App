@@ -19,6 +19,7 @@ const temp_max= document.getElementById(`temperature_max`);
 const temp_change= document.getElementById(`temperature_change`);
 const rain= document.getElementById(`rain`);
 let i =0;
+let counter=0;
 let forecast;
 let name = `Delhi`;
 function display()
@@ -71,9 +72,10 @@ async function getforecast(name) {
     const respData = await resp.json();
     console.log(respData.forecast);
 
-    if(respData.forecast==undefined)
+    if(respData.forecast==undefined && counter<=2)
     {
-        cityName.innerHTML='City: Delhi'
+	counter++;
+        cityName.innerHTML='City: Delhi';
         getforecast("delhi");
     }
     else
