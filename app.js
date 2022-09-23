@@ -6,6 +6,8 @@ const options = {
 	}
 };
 const date = document.getElementById(`date`);
+const output = document.getElementById(`output`);
+const components = document.getElementsByClassName(`components`);
 const form = document.getElementById(`form`);
 const city = document.getElementById(`cityname`);
 const cityName = document.getElementById(`city`);
@@ -18,8 +20,8 @@ const temp_min= document.getElementById(`temperature_min`);
 const temp_max= document.getElementById(`temperature_max`);
 const temp_change= document.getElementById(`temperature_change`);
 const rain= document.getElementById(`rain`);
+let error = `You have exceeded the DAILY quota for Requests on your current plan, BASIC. Upgrade your plan at https://rapidapi.com/wettercom-wettercom-default/api/forecast9`;
 let i =0;
-let counter=0;
 let forecast;
 let name = `Delhi`;
 function display()
@@ -70,13 +72,17 @@ function nextorprev(a){
 async function getforecast(name) {
     const resp = await fetch(`https://forecast9.p.rapidapi.com/rapidapi/forecast/${name}/summary/`, options);
     const respData = await resp.json();
-    console.log(respData.forecast);
 
-    if(respData.forecast==undefined && counter<=2)
+    if(respData.forecast==undefined && respData.message!=error)
     {
-	counter++;
         cityName.innerHTML='City: Delhi';
         getforecast("delhi");
+    }
+    else if(respData.message==error)
+    {
+        output.innerHTML = `<div><br> You have exceeded the DAILY quota for Requests</div>`
+        output.style.height = `3rem`
+        output.style.fontSize = `0.9rem`
     }
     else
     {
