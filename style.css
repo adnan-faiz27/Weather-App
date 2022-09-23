@@ -1,0 +1,80 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    border: none;
+}
+
+#cityname{
+    height: 0.8rem;
+    width: 15rem;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 1px black;
+    border-radius: 0.3rem;
+}
+.maindiv{
+    height: 100vh;
+    background: #666600; 
+    background: -webkit-linear-gradient(to right, #666600, #6e6e32);
+    background: linear-gradient(to right, #666600, #848421);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.output{
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px rgba(156,160,185 , 0.06) , 0 15px 40px rgba(0,0,0,0.3) ;
+    overflow: hidden;
+}
+
+.components{
+    width: 15rem;
+    height: 1.7rem;
+    padding: 0.4rem;
+    font-size: 1.3rem;
+    background-color: #575700;;
+    text-align: left;
+    color: white;
+}
+.component{
+    text-align: center;
+}
+.input{
+    text-align: center;
+    padding: 0.4rem 0 0.4rem 0;
+    margin-bottom: 0.3rem;
+}
+.header{
+    font-size: 2.5rem;
+    text-align: center;
+    color: whitesmoke;
+    padding: 0.8rem 0 0.5rem 0;
+}
+#increase{
+    font-size: 1.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    float: right;
+    
+}
+#decrease{
+    font-size: 1.4rem;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    float: left;
+}
+.btn:hover{
+    background-color: rgb(220, 243, 139);
+    transition: 0.3s;
+}
+.message{
+    margin-top: 1rem;
+    width: 18rem;
+    text-align: center;
+    font-size: 0.7rem;
+}
