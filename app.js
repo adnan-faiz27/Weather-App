@@ -155,7 +155,7 @@ async function getforecast(name) {
 
   if (respData.forecast == undefined && respData.message != error) {
     cityName.innerHTML = "City: Delhi";
-    getforecast("delhi");
+    getforecast("Delhi");
   } else if (respData.message == error) {
     output.innerHTML = `<div><br> You have exceeded the DAILY quota for Requests</div>`;
     output.style.height = `3rem`;
