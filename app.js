@@ -104,7 +104,7 @@ function dispchart() {
     options: {
       legend: { display: false },
       scales: {
-        xAxes: [{ ticks: { min: 0, max: 16 } }],
+        xAxes: [{ ticks: { min: 0, max: 14 } }],
         yAxes: [{ ticks: { min: 0, max: 20 } }],
       },
     },
@@ -123,7 +123,7 @@ function dispchart() {
     options: {
       legend: { display: false },
       scales: {
-        xAxes: [{ ticks: { min: 0, max: 16 } }],
+        xAxes: [{ ticks: { min: 0, max: 14 } }],
         yAxes: [{ ticks: { min: -20, max: 50 } }],
       },
     },
