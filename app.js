@@ -56,7 +56,6 @@ function showcharts() {
     windarr[i] = forecast.items[i].wind.max;
     temparr[i] = forecast.items[i].temperature.max;
   }
-  dispchart();
 }
 function dispchart() {
   xyValues2 = [
