@@ -160,7 +160,7 @@ async function getforecast(name) {
   } else if (respData.message == error) {
     output.innerHTML = `<div><br> You have exceeded the DAILY quota for Requests</div>`;
     output.style.height = `3rem`;
-    output.style.fontSize = `0.9rem`;
+    output.style.fontSize = `0.75rem`;
     output.style.color = `white`;
     Maindiv.style.height = `130vh`;
   } else {
