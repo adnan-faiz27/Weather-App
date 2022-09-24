@@ -170,11 +170,11 @@
     }
     #tempChart{
         max-width: 22rem;
-        min-height: 7rem;
+        min-height: 8rem;
     }
     #WindChart{
         max-width: 22rem;
-        min-height: 7rem;
+        min-height: 8rem;
     }
     .chartspec1{
         width: 22rem;
@@ -186,11 +186,11 @@
     }
     #tempChart{
         max-width: 18rem;
-        min-height: 6rem;
+        min-height: 8rem;
     }
     #WindChart{
         max-width: 18rem;
-        min-height: 6rem;
+        min-height: 8rem;
     }
     .chartspec1{
         width: 18.5rem;
@@ -208,11 +208,11 @@
     }
     #tempChart{
         max-width: 16rem;
-        min-height: 7rem;
+        min-height: 8rem;
     }
     #WindChart{
         max-width: 16rem;
-        min-height: 7rem;
+        min-height: 8rem;
     }
     .chartspec1{
         width: 15.5rem;
@@ -234,11 +234,11 @@
     }
     #tempChart{
         max-width: 15rem;
-        min-height: 7rem;
+        min-height: 8rem;
     }
     #WindChart{
         max-width: 15rem;
-        min-height: 7rem;
+        min-height: 8rem;
     }
     .chartspec1{
         width: 14.5rem;
