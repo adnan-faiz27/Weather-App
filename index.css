@@ -1,0 +1,304 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    border: none;
+}
+
+#cityname{
+    height: 0.8rem;
+    width: 15rem;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 1px black;
+    border-radius: 0.3rem;
+}
+.maindiv{
+    height: 179vh;
+    background: #666600; 
+    background: -webkit-linear-gradient(to right, #666600, #6e6e32);
+    background: linear-gradient(to right, #666600, #848421);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#output{
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px rgba(156,160,185 , 0.06) , 0 15px 40px rgba(0,0,0,0.3) ;
+    overflow: hidden;
+}
+
+.components{
+    width: 15rem;
+    height: 1.7rem;
+    padding: 0.4rem;
+    font-size: 1.1rem;
+    background-color: #575700;
+    text-align: left;
+    color: white;
+}
+.component{
+    text-align: center;
+}
+.input{
+    text-align: center;
+    padding: 0.4rem 0 0.4rem 0;
+    margin-bottom: 0.3rem;
+}
+.header{
+    font-size: 2.5rem;
+    text-align: center;
+    color: whitesmoke;
+    padding: 0.8rem 0 0.5rem 0;
+}
+#increase{
+    font-size: 1.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    float: right;
+    
+}
+#decrease{
+    font-size: 1.4rem;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    float: left;
+}
+.btn:hover{
+    background-color: rgb(220, 243, 139);
+    transition: 0.3s;
+}
+.message{
+    margin-top: 1rem;
+    width: 17rem;
+    text-align: center;
+    font-size: 0.7rem;
+}
+.showchart{
+    width: 8rem;
+    padding: 0.4rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.showchart:hover{
+    background-color: #c5c54a;
+    transition: 0.5s;
+    
+}
+.charts{
+    display: flex;
+    flex-direction: row; 
+}
+.chart
+{
+    background-color: rgb(210, 210, 210);
+    margin: 10px;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.chartspec{
+    color: white;
+    width: 45rem;
+}
+.chartspec1{
+    color: white;
+    display: none;
+}
+#rightchart{
+    position: relative;
+    float: right;
+}
+#tempChart{
+    max-width: 28rem;
+    min-height: 9rem;
+}
+#RainChart{
+    max-width: 28rem;
+    min-height: 9rem;
+}
+#rightchart1{
+    position: relative;
+    float: right;
+}
+#SnowChart{
+    max-width: 28rem;
+    min-height: 9rem;
+}
+#rhChart{
+    max-width: 28rem;
+    min-height: 9rem;
+}
+@media only screen and (max-width: 1020px) {
+    .charts{
+        flex-direction: column; 
+    } 
+    .chartspec1{
+        width: 28rem;
+        display: block;
+        text-align: center;
+        padding:1rem 1rem 0 1rem ;
+    }
+    .maindiv{
+        height: 265vh;
+    }
+    #rightchart{
+        display: none;
+    }
+    #rightchart1{
+        display: none;
+    }
+    .chartspec{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20rem;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .maindiv{
+        height: 250vh;
+    }
+    .charts{
+        width: 28rem;
+    }
+    #tempChart{
+        max-width: 25rem;
+        min-height: 8rem;
+    }
+    #RainChart{
+        max-width: 25rem;
+        min-height: 8rem;
+    }
+    #rhChart{
+        max-width: 25rem;
+        min-height: 8rem;
+    }
+    #SnowChart{
+        max-width: 25rem;
+        min-height: 8rem;
+    }
+    .chartspec1{
+        width: 25rem;
+    }
+}
+@media only screen and (max-width: 460px) {
+    .charts{
+        width: 25rem;
+    }
+    #tempChart{
+        max-width: 22rem;
+        min-height: 8rem;
+    }
+    #RainChart{
+        max-width: 22rem;
+        min-height: 8rem;
+    }
+    #SnowChart{
+        max-width: 22rem;
+        min-height: 8rem;
+    }
+    #rhChart{
+        max-width: 22rem;
+        min-height: 8rem;
+    }
+    .chartspec1{
+        width: 22rem;
+    }
+}
+@media only screen and (max-width: 410px) {
+    .charts{
+        width: 22rem;
+    }
+    .maindiv{
+        height: 240vh;
+    }
+    #tempChart{
+        max-width: 18rem;
+        min-height: 8rem;
+    }
+    #RainChart{
+        max-width: 18rem;
+        min-height: 8rem;
+    }
+    #rhChart{
+        max-width: 18rem;
+        min-height: 8rem;
+    }
+    #SnowChart{
+        max-width: 18rem;
+        min-height: 8rem;
+    }
+    .chartspec1{
+        width: 18.5rem;
+    }
+}
+@media only screen and (max-width: 370px) {
+    .charts{
+        width: 18rem;
+    }
+    .chartspec{
+        width: 18rem;
+    }
+    #tempChart{
+        max-width: 16rem;
+        min-height: 8rem;
+    }
+    #RainChart{
+        max-width: 16rem;
+        min-height: 8rem;
+    }
+    #rhChart{
+        max-width: 16rem;
+        min-height: 8rem;
+    }
+    #SnowChart{
+        max-width: 16rem;
+        min-height: 8rem;
+    }
+    .chartspec1{
+        width: 15.5rem;
+    }
+    .chart{
+        padding: 0.6rem;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .charts{
+        width: 17.2rem;
+    }
+    .chartspec{
+        width: 17rem;
+        font-size: 0.9rem;
+    }
+    .maindiv{
+        height: 220vh;
+    }
+    #tempChart{
+        max-width: 15rem;
+        min-height: 8rem;
+    }
+    #RainChart{
+        max-width: 15rem;
+        min-height: 8rem;
+    }
+    #rhChart{
+        max-width: 15rem;
+        min-height: 8rem;
+    }
+    #SnowChart{
+        max-width: 15rem;
+        min-height: 8rem;
+    }
+    .chartspec1{
+        width: 14.5rem;
+    }
+    .chart{
+        padding: 0.6rem;
+    }
+}
