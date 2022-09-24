@@ -9,7 +9,7 @@ let lat;
 let long;
 let xyValues1;
 let xyValues2;
-let windarr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let rainarr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 let temparr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 const date = document.getElementById(`date`);
 const output = document.getElementById(`output`);
@@ -53,26 +53,26 @@ function display() {
 }
 function showcharts() {
   for (let i = 0; i < 14; i++) {
-    windarr[i] = forecast.items[i].wind.max;
+    rainarr[i] = forecast.items[i].prec.probability;
     temparr[i] = forecast.items[i].temperature.max;
   }
 }
 function dispchart() {
   xyValues2 = [
-    { x: 1, y: windarr[0] },
-    { x: 2, y: windarr[1] },
-    { x: 3, y: windarr[2] },
-    { x: 4, y: windarr[3] },
-    { x: 5, y: windarr[4] },
-    { x: 6, y: windarr[5] },
-    { x: 7, y: windarr[6] },
-    { x: 8, y: windarr[7] },
-    { x: 9, y: windarr[8] },
-    { x: 10, y: windarr[9] },
-    { x: 11, y: windarr[10] },
-    { x: 12, y: windarr[11] },
-    { x: 13, y: windarr[12] },
-    { x: 14, y: windarr[13] },
+    { x: 1, y: rainarr[0] },
+    { x: 2, y: rainarr[1] },
+    { x: 3, y: rainarr[2] },
+    { x: 4, y: rainarr[3] },
+    { x: 5, y: rainarr[4] },
+    { x: 6, y: rainarr[5] },
+    { x: 7, y: rainarr[6] },
+    { x: 8, y: rainarr[7] },
+    { x: 9, y: rainarr[8] },
+    { x: 10, y: rainarr[9] },
+    { x: 11, y: rainarr[10] },
+    { x: 12, y: rainarr[11] },
+    { x: 13, y: rainarr[12] },
+    { x: 14, y: rainarr[13] },
   ];
   xyValues1 = [
     { x: 1, y: temparr[0] },
@@ -90,7 +90,7 @@ function dispchart() {
     { x: 13, y: temparr[12] },
     { x: 14, y: temparr[13] },
   ];
-  new Chart("WindChart", {
+  new Chart("RainChart", {
     type: "scatter",
     data: {
       datasets: [
@@ -105,7 +105,7 @@ function dispchart() {
       legend: { display: false },
       scales: {
         xAxes: [{ ticks: { min: 0, max: 14 } }],
-        yAxes: [{ ticks: { min: 0, max: 20 } }],
+        yAxes: [{ ticks: { min: 0, max: 100 } }],
       },
     },
   });
