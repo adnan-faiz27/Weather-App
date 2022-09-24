@@ -216,7 +216,7 @@
         width: 22rem;
     }
     .maindiv{
-        height: 240vh;
+        height: 220vh;
     }
     #tempChart{
         max-width: 18rem;
@@ -277,7 +277,7 @@
         font-size: 0.9rem;
     }
     .maindiv{
-        height: 220vh;
+        height: 200vh;
     }
     #tempChart{
         max-width: 15rem;
