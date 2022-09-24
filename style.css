@@ -118,7 +118,7 @@
     max-width: 28rem;
     min-height: 9rem;
 }
-#WindChart{
+#RainChart{
     max-width: 28rem;
     min-height: 9rem;
 }
@@ -156,7 +156,7 @@
         max-width: 25rem;
         min-height: 8rem;
     }
-    #WindChart{
+    #RainChart{
         max-width: 25rem;
         min-height: 8rem;
     }
@@ -172,7 +172,7 @@
         max-width: 22rem;
         min-height: 8rem;
     }
-    #WindChart{
+    #RainChart{
         max-width: 22rem;
         min-height: 8rem;
     }
@@ -188,7 +188,7 @@
         max-width: 18rem;
         min-height: 8rem;
     }
-    #WindChart{
+    #RainChart{
         max-width: 18rem;
         min-height: 8rem;
     }
@@ -210,7 +210,7 @@
         max-width: 16rem;
         min-height: 8rem;
     }
-    #WindChart{
+    #RainChart{
         max-width: 16rem;
         min-height: 8rem;
     }
@@ -236,7 +236,7 @@
         max-width: 15rem;
         min-height: 8rem;
     }
-    #WindChart{
+    #RainChart{
         max-width: 15rem;
         min-height: 8rem;
     }
