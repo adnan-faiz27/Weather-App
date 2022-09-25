@@ -15,7 +15,7 @@
     border-radius: 0.3rem;
 }
 .maindiv{
-    height: 203vh;
+    height: 223vh;
     background: #666600; 
     background: -webkit-linear-gradient(to right, #666600, #6e6e32);
     background: linear-gradient(to right, #666600, #848421);
@@ -154,7 +154,7 @@
         padding:1rem 1rem 0 1rem ;
     }
     .maindiv{
-        height: 295vh;
+        height: 275vh;
     }
     #rightchart{
         display: none;
@@ -171,7 +171,7 @@
 }
 @media only screen and (max-width: 520px) {
     .maindiv{
-        height: 275vh;
+        height: 255vh;
     }
     .charts{
         width: 28rem;
@@ -225,7 +225,7 @@
         width: 22rem;
     }
     .maindiv{
-        height: 250vh;
+        height: 235vh;
     }
     #tempChart{
         max-width: 18rem;
@@ -286,7 +286,7 @@
         font-size: 0.9rem;
     }
     .maindiv{
-        height: 235vh;
+        height: 220vh;
     }
     #tempChart{
         max-width: 15rem;
