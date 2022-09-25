@@ -311,3 +311,18 @@
         padding: 0.6rem;
     }
 }
+@media only screen and (max-height: 710px) {
+    .maindiv{
+        height: 290vh;
+    }
+}
+@media only screen and (max-height: 670px) {
+    .maindiv{
+        height: 305vh;
+    }
+}
+@media only screen and (max-height: 635px) {
+    .maindiv{
+        height: 320vh;
+    }
+}
