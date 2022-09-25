@@ -279,21 +279,38 @@ const options1 = {
 	}
 };
 async function getlatlong(name) {
-    const resp = await fetch(`https://spott.p.rapidapi.com/places?type=CITY&skip=0&limit=10&q=${name}`, options1)
-    const respData = await resp.json();
-    if(respData.length==0)
+  const resp = await fetch(
+    `https://spott.p.rapidapi.com/places?type=CITY&skip=0&limit=10&q=${name}`,
+    options1
+  );
+  const respData = await resp.json();
+  if (respData.length == 0) {
     cityName.innerHTML = "City: Try another city";
-    else if (respData.message) {
-      output.innerHTML = `<div><br> You have exceeded the DAILY quota for Requests</div>`;
-      output.style.height = `3rem`;
-      output.style.fontSize = `0.75rem`;
-      output.style.color = `white`;
-      Maindiv.style.height = `200vh`;
-    }
-    else
-    {
-      getforecast(respData[0].coordinates.latitude , respData[0].coordinates.longitude);
-    } 
+    Curr_date.innerHTML = `Current Date: `;
+    rh.innerHTML = `Releative Humidity: `;
+    date.innerHTML = `Date: `;
+    maxwind.innerHTML = `Max WindSpeed: `;
+    snow.innerHTML = `Snow: `;
+    temp_min.innerHTML = `Min Temperature: `;
+    temp_max.innerHTML = `Max Temperature: `;
+    rain.innerHTML = `Rain Probablity: `;
+    temp_change.innerHTML = `Change in temp: `;
+    rainarr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    temparr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    rharr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    snowarr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  } else if (respData.message) {
+    output.innerHTML = `<div><br> You have exceeded the DAILY quota for Requests</div>`;
+    output.style.height = `3rem`;
+    output.style.fontSize = `0.75rem`;
+    output.style.color = `white`;
+    Maindiv.style.height = `200vh`;
+  } else {
+    getforecast(
+      respData[0].coordinates.latitude,
+      respData[0].coordinates.longitude
+    );
+  }
 }
 
 
