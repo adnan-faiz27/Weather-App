@@ -249,8 +249,7 @@
     const respData = await resp.json();
   
     if (respData == undefined) {
-      cityName.innerHTML = "City: Delhi";
-      getforecast(28.7041 , 77.1025);
+      getforecast(28.6139 , 77.2090);
     } else if (respData.message) {
       output.innerHTML = `<div><br> You have exceeded the DAILY quota for Requests</div>`;
       output.style.height = `3rem`;
@@ -316,8 +315,7 @@ async function getlatlong(name) {
   };
   
   const errorCallback = (error) => {
-    cityName.innerHTML = "City: Delhi";
-    getforecast(28.7041 , 77.1025);
+    getforecast(28.6139 , 77.2090);
   };
   
   navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
