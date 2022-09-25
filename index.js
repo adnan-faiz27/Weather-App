@@ -250,7 +250,7 @@
   
     if (respData == undefined) {
       cityName.innerHTML = "City: Delhi";
-      getforecast(23.38 , 77.13);
+      getforecast(28.7041 , 77.1025);
     } else if (respData.message) {
       output.innerHTML = `<div><br> You have exceeded the DAILY quota for Requests</div>`;
       output.style.height = `3rem`;
