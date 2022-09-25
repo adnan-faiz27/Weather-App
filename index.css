@@ -318,11 +318,11 @@
 }
 @media only screen and (max-height: 670px) {
     .maindiv{
-        height: 305vh;
+        height: 302vh;
     }
 }
 @media only screen and (max-height: 635px) {
     .maindiv{
-        height: 320vh;
+        height: 315vh;
     }
 }
