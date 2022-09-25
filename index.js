@@ -264,8 +264,7 @@ async function getforecast(lat, long) {
   const respData = await resp.json();
 
   if (respData == undefined) {
-    cityName.innerHTML = "City: Delhi";
-    getforecast(23.38, 77.13);
+    getforecast(28.6139, 77.2090);
   } else if (respData.message) {
     output.innerHTML = `<div><br> You have exceeded the DAILY quota for Requests</div>`;
     output.style.height = `3rem`;
@@ -296,7 +295,7 @@ const options1 = {
 };
 async function getlatlong(name) {
   const resp = await fetch(
-    // `https://spott.p.rapidapi.com/places?type=CITY&skip=0&limit=10&q=${name}`,
+    `https://spott.p.rapidapi.com/places?type=CITY&skip=0&limit=10&q=${name}`,
     options1
   );
   const respData = await resp.json();
@@ -347,8 +346,7 @@ const successCallback = (position) => {
 };
 
 const errorCallback = (error) => {
-  cityName.innerHTML = "City: Delhi";
-  getforecast(23.38, 77.13);
+  getforecast(28.6139, 77.2090);
 };
 
 navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
