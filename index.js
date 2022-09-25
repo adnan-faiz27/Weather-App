@@ -316,7 +316,8 @@ async function getlatlong(name) {
   };
   
   const errorCallback = (error) => {
-    console.log(error);
+    cityName.innerHTML = "City: Delhi";
+    getforecast(23.38 , 77.13);
   };
   
   navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
