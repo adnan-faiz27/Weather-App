@@ -272,8 +272,13 @@ async function getforecast(lat, long) {
     output.style.color = `white`;
     Maindiv.style.height = `200vh`;
   } else {
+    rainarr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    temparr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    rharr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    snowarr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     cityName.innerHTML = `City: ${respData.city_name}`;
     forecast = respData.data;
+    dispchart();
     display();
     showicon();
     showcharts();
@@ -314,6 +319,7 @@ async function getlatlong(name) {
     temparr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     rharr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     snowarr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    dispchart();
   } else if (respData.message) {
     output.innerHTML = `<div><br> You have exceeded the DAILY quota for Requests</div>`;
     output.style.height = `3rem`;
