@@ -55,6 +55,28 @@ function showicon() {
     forecast[i].weather.description == "Heavy Storm"
   ) {
     icon.innerHTML = `<i class="uil uil-thunderstorm"></i>`;
+  }else if (
+  forecast[i].weather.description == "Light rain" ||
+  forecast[i].weather.description == "Mix snow/rain"||
+  (forecast[i].pop<40 && forecast[i].pop>25))
+  {
+    icon.innerHTML = `<i class="uil uil-cloud-drizzle"></i>`;
+  } else if (
+    forecast[i].weather.description == "Moderate rain" ||
+    forecast[i].weather.description == "Light shower rain"||
+    (forecast[i].pop>55 && forecast[i].pop<70)
+  ) {
+    icon.innerHTML = `<i class="uil uil-cloud-showers"></i>`;
+  }else if (
+    forecast[i].weather.description == "Snow" ||
+    forecast[i].weather.description == "Light Snow" ||
+    forecast[i].weather.description == "Moderate Snow" ||
+    forecast[i].weather.description == "Heavy Snow"||
+    forecast[i].snow>5
+  ){
+    icon.innerHTML = `<i class="uil uil-cloud-meatball"></i>`;
+  }else if (forecast[i].weather.description == "Heavy rain"||forecast[i].pop>80) {
+    icon.innerHTML = `<i class="uil uil-cloud-showers-alt"></i>`;
   } else if (
     forecast[i].weather.description == "Few clouds" ||
     forecast[i].weather.description == "Scattered clouds" ||
@@ -63,28 +85,9 @@ function showicon() {
     forecast[i].weather.description == "Broken clouds"
   ) {
     icon.innerHTML = `<i class="uil uil-clouds"></i>`;
-  } else if (
-    forecast[i].weather.description == "Snow" ||
-    forecast[i].weather.description == "Light Snow" ||
-    forecast[i].weather.description == "Moderate Snow" ||
-    forecast[i].weather.description == "Heavy Snow"
-  ) {
-    icon.innerHTML = `<i class="uil uil-cloud-meatball"></i>`;
-  } else if (forecast[i].weather.description == "Clear Sky") {
+  }else if (forecast[i].weather.description == "Clear Sky") {
     icon.innerHTML = `<i class="uil uil-cloud-sun"></i>`;
-  } else if (
-    forecast[i].weather.description == "Light rain" ||
-    forecast[i].weather.description == "Mix snow/rain"
-  ) {
-    icon.innerHTML = `<i class="uil uil-cloud-drizzle"></i>`;
-  } else if (
-    forecast[i].weather.description == "Moderate rain" ||
-    forecast[i].weather.description == "Light shower rain"
-  ) {
-    icon.innerHTML = `<i class="uil uil-cloud-showers"></i>`;
-  } else if (forecast[i].weather.description == "Heavy rain") {
-    icon.innerHTML = `<i class="uil uil-cloud-showers-alt"></i>`;
-  } else {
+  }else {
     icon.innerHTML = `<i class="uil uil-cloud"></i>`;
   }
 }
@@ -266,8 +269,8 @@ async function getforecast(lat, long) {
   if (respData == undefined) {
     getforecast(28.6139, 77.2090);
   } else if (respData.message) {
-    output.innerHTML = `<div><br> You have exceeded the DAILY quota for Requests</div>`;
-    output.style.height = `3rem`;
+    output.innerHTML = `<div><br> You have exceeded the DAILY quota for Requests<br>Try again in 24hrs</div>`;
+    output.style.height = `3.5rem`;
     output.style.fontSize = `0.75rem`;
     output.style.color = `white`;
     Maindiv.style.height = `200vh`;
@@ -321,7 +324,7 @@ async function getlatlong(name) {
     snowarr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     dispchart();
   } else if (respData.message) {
-    output.innerHTML = `<div><br> You have exceeded the DAILY quota for Requests</div>`;
+    output.innerHTML = `<div><br> You have exceeded the MONTHLY quota for Requests</div>`;
     output.style.height = `3rem`;
     output.style.fontSize = `0.75rem`;
     output.style.color = `white`;
