@@ -273,7 +273,7 @@ async function getforecast(lat, long) {
     output.style.height = `3.5rem`;
     output.style.fontSize = `0.75rem`;
     output.style.color = `white`;
-    Maindiv.style.height = `200vh`;
+    Maindiv.style.height = `190vh`;
   } else {
     rainarr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     temparr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -328,7 +328,7 @@ async function getlatlong(name) {
     output.style.height = `3rem`;
     output.style.fontSize = `0.75rem`;
     output.style.color = `white`;
-    Maindiv.style.height = `200vh`;
+    Maindiv.style.height = `190vh`;
   } else {
     getforecast(
       respData[0].coordinates.latitude,
