@@ -272,6 +272,7 @@ async function getforecast(lat, long) {
     output.innerHTML = `<div><br> You have exceeded the DAILY quota for Requests<br>Try again in 24hrs</div>`;
     output.style.height = `3.5rem`;
     output.style.fontSize = `0.75rem`;
+    output.style.textAlign = `center`;
     output.style.color = `white`;
     Maindiv.style.height = `190vh`;
   } else {
