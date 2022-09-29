@@ -217,7 +217,7 @@ function dispchart() {
       legend: { display: false },
       scales: {
         xAxes: [{ ticks: { min: 0, max: 14 } }],
-        yAxes: [{ ticks: { min: 0, max: 70 } }],
+        yAxes: [{ ticks: { min: 0, max: 90 } }],
       },
     },
   });
