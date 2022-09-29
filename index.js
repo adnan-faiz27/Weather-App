@@ -276,6 +276,7 @@ async function getforecast(lat, long) {
     output.style.color = `white`;
     Maindiv.style.height = `190vh`;
   } else {
+    i=0;
     rainarr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     temparr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     rharr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
