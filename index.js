@@ -91,12 +91,21 @@ function showicon() {
     icon.innerHTML = `<i class="uil uil-cloud"></i>`;
   }
 }
+let max = 100;
 function showcharts() {
   for (let i = 0; i < 14; i++) {
     rainarr[i] = forecast[i].pop;
     temparr[i] = forecast[i].max_temp;
     rharr[i] = forecast[i].rh;
     snowarr[i] = forecast[i].snow_depth;
+  }
+  max = Math.max(...snowarr);
+    if(max>100)
+    {
+      max=1.5*max;
+      max=Math.floor(max/100);
+      max = max*100;
+    }
   }
 }
 function dispchart() {
@@ -276,6 +285,8 @@ async function getforecast(lat, long) {
     output.style.color = `white`;
     Maindiv.style.height = `190vh`;
   } else {
+    i=0;
+    page.innerText = `Page: 1`;
     rainarr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     temparr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     rharr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
