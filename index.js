@@ -107,7 +107,7 @@ function showcharts() {
       max = max*100;
     }
   }
-}
+
 function dispchart() {
   xyValues2 = [
     { x: 1, y: rainarr[0] },
