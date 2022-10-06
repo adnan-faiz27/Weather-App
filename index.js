@@ -91,23 +91,25 @@ function showicon() {
     icon.innerHTML = `<i class="uil uil-cloud"></i>`;
   }
 }
-let max = 100;
+let max;
 function showcharts() {
   for (let i = 0; i < 14; i++) {
     rainarr[i] = forecast[i].pop;
     temparr[i] = forecast[i].max_temp;
     rharr[i] = forecast[i].rh;
     snowarr[i] = forecast[i].snow_depth;
+    max = Math.max(...snowarr);
   }
-  max = Math.max(...snowarr);
     if(max>100)
     {
       max=1.5*max;
       max=Math.floor(max/100);
       max = max*100;
     }
-  }
-
+    else{
+      max = 100;
+    }
+}
 function dispchart() {
   xyValues2 = [
     { x: 1, y: rainarr[0] },
@@ -226,7 +228,7 @@ function dispchart() {
       legend: { display: false },
       scales: {
         xAxes: [{ ticks: { min: 0, max: 14 } }],
-        yAxes: [{ ticks: { min: 0, max: 300 } }],
+        yAxes: [{ ticks: { min: 0, max: max } }],
       },
     },
   });
